@@ -83,7 +83,7 @@ To make it production-ready:
 
 ## 📷 Preview
 
-![Form Preview](https://via.placeholder.com/600x300?text=Login+and+Signup+Form+Preview)
+![Form Preview](https://github.com/123Heroni/Login-SignUp-Page/blob/main/Screenshot%202025-07-21%20122306.png)
 
 
 ## 📄 License
