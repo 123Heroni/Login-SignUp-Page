@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Practice</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-container">
+            <div class="form-toggle">
+                <button class="toggle-btn active" onclick="showLogin()">Login</button>
+                <button class="toggle-btn" onclick="showSignup()">Sign Up</button>
+            </div>
+
+            <!-- Login Form -->
+            <div id="loginForm" class="form-section active">
+                <h2 class="form-title">
+                    Welcome Back &#33
+                </h2>
+                <form onsubmit="handleLogin(event)">
+                    <div class="form-group">
+                        <input type="email" class="form-input" id="email" placeholder="Email" required>
+                        <div class="error-message" id="loginEmailError"></div>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-input" placeholder="Password" required>
+                        <div class="error-message" id="loginPasswordError"></div>
+                        <button type="submit" class="submit-btn">
+                            Login
+                        </button>
+                        <div class="success-message" id="loginSuccess"></div>
+                    </div>
+                </form>
+                <div class="forgot-password">
+                    <a href="#" onclick="showForgotPassword()">
+                        Forgot Password?
+                    </a>
+                </div>
+            </div>
+
+            <!-- Sign Up Form -->
+            <div id="signupForm" class="form-section">
+                <h2 class="form-title">
+                    Create Account
+                </h2>
+                <form onsubmit="handleSignup(event)">
+                    <div class="form-group">
+                        <input type="text" class="form-input" placeholder="Username" required>
+                        <div class="error-message" id="signupUsernameError"></div>
+
+                        <div class="success-message" id="loginSuccess"></div>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-input" id="email" placeholder="Email" required>
+                        <div class="error-message" id="loginEmailError"></div>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-input" placeholder="Password" required onkeyup="checkPasswordStrength(this.value)">
+                        <div class="password-strength">
+                            <div class="password-strength-bar" id="passwordStrengthBar"></div>
+                        </div>
+                        <div class="error-message" id="signupPasswordError"></div>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-input" placeholder="Confirm Password" required onkeyup="checkPasswordMatch()">
+                        <div class="error-message" id="confirmPasswordError"></div>
+                    </div>
+                    <button type="submit" class="submit-btn">Sign Up</button>
+                    <div class="success-message" id="signupSuccess"></div>
+                </form>
+            </div>
+        </div>
+        <div id="customAlert" class="custom-alert">
+            <div class="alert-content">
+                <p id="alertMessage">A custom alert</p>
+                <button onclick="closeAlert()">OK</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
